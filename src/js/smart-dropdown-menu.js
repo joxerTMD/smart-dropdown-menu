@@ -13,7 +13,7 @@ export default class SmartDropdownMenu {
     this.el.addEventListener('mouseover', this.showMenu.bind(this));
     this.el.addEventListener('mouseout', this.hideMenu.bind(this));
     this.showMenu();
-    this.triarea();
+    this.appendTriareaStyle();
     this.hideMenu();
   }
 
@@ -25,7 +25,8 @@ export default class SmartDropdownMenu {
     this.el.classList.remove('show');
   }
 
-  triarea() {
+  appendTriareaStyle() {
+    const styleObj = this.calculateTriarea();
     // 擬似要素のcss変更用styleタグ
     let categoryMenuStyle = document.getElementById('smart-dropdown-menu-style');
     if (!categoryMenuStyle) {
@@ -34,7 +35,10 @@ export default class SmartDropdownMenu {
       categoryMenuStyle.id = 'smart-dropdown-menu-style';
       document.querySelector('head').appendChild(categoryMenuStyle);
     }
+    categoryMenuStyle.innerHTML = this.objectToStyle(styleObj);
+  }
 
+  calculateTriarea() {
     // サブメニュー選択のためにカーソルを斜め移動した際に
     // 親メニューの選択が変わってしまわないように、hover判定領域を擬似要素で拡大する
     let menuListSub = this.el.querySelector('.menu-item');
@@ -65,7 +69,7 @@ export default class SmartDropdownMenu {
       this.items[i].closeSubmenu();
     }
 
-    categoryMenuStyle.innerHTML = this.objectToStyle(categoryMenuStyleObj);
+    return categoryMenuStyleObj;
   }
 
   objectToStyle(obj) {
