@@ -1,13 +1,13 @@
-import SmartMenuItem from './smartmenuitem';
+import SmartDropdownMenuItem from './smart-dropdown-menu-item';
 
-export default class SmartMenu {
+export default class SmartDropdownMenu {
   constructor(node) {
     this.el = node;
     this.items = [];
 
     let menuItem = this.el.querySelectorAll('.menu-list > .menu-item');
     for (let i = 0; i < menuItem.length; i++) {
-      this.items.push(new SmartMenuItem(menuItem[i], i));
+      this.items.push(new SmartDropdownMenuItem(menuItem[i], i));
     }
 
     this.el.addEventListener('mouseover', this.showMenu.bind(this));
@@ -27,11 +27,11 @@ export default class SmartMenu {
 
   triarea() {
     // 擬似要素のcss変更用styleタグ
-    let categoryMenuStyle = document.getElementById('category-menu-style');
+    let categoryMenuStyle = document.getElementById('smart-dropdown-menu-style');
     if (!categoryMenuStyle) {
       categoryMenuStyle = document.createElement('style');
       categoryMenuStyle.type = 'text/css';
-      categoryMenuStyle.id = 'category-menu-style';
+      categoryMenuStyle.id = 'smart-dropdown-menu-style';
       document.querySelector('head').appendChild(categoryMenuStyle);
     }
 

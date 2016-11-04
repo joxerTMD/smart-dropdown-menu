@@ -1,3 +1,3 @@
-import SmartMenu from './smartmenu';
+import SmartDropdownMenu from './smart-dropdown-menu';
 
-window.SmartMenu = SmartMenu;
+window.SmartDropdownMenu = SmartDropdownMenu;

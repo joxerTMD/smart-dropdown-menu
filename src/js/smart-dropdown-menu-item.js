@@ -1,4 +1,4 @@
-export default class SmartMenuItem {
+export default class SmartDropdownMenuItem {
   constructor(el, index) {
     this.el = el;
     this.index = index;
