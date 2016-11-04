@@ -31,7 +31,8 @@ const bundleJS = (isWatch, isUglify) => {
       .pipe(isUglify ? $.sourcemaps.init({loadMaps: true}) : $.util.noop())
       .pipe(isUglify ? $.uglify() : $.util.noop())
       .pipe(isUglify ? $.sourcemaps.write() : $.util.noop())
-      .pipe(gulp.dest('dest/js'));
+      .pipe(gulp.dest('dest/js'))
+      .pipe(isWatch ? bs.stream({ once: true }) : $.util.noop());
   };
 
   if (isWatch) {
@@ -56,7 +57,8 @@ gulp.task('css', () => {
   gulp.src('src/scss/**/*.scss')
       .pipe(sass())
       .on('error', (err) => console.log('Error: ' + err.message) )
-      .pipe(gulp.dest('dest/css/'));
+      .pipe(gulp.dest('dest/css/'))
+      .pipe(bs.stream({ once: true }));
 });
 
 gulp.task('dev', ['css', 'js'], () => {
