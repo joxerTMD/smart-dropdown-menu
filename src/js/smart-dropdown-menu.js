@@ -26,7 +26,7 @@ export default class SmartDropdownMenu {
   }
 
   appendTriareaStyle() {
-    // 擬似要素のcss変更用styleタグ
+    // <style> for triarea
     let categoryMenuStyle = document.getElementById('smart-dropdown-menu-style');
     if (!categoryMenuStyle) {
       categoryMenuStyle = document.createElement('style');
@@ -39,8 +39,7 @@ export default class SmartDropdownMenu {
   }
 
   calculateTriarea() {
-    // サブメニュー選択のためにカーソルを斜め移動した際に
-    // 親メニューの選択が変わってしまわないように、hover判定領域を擬似要素で拡大する
+    // "triarea" extend hover area of menu for mouse cursor's diagonal movement
     const menuListSub = this.el.querySelector('.menu-item');
     const menuItemWidth = menuListSub.offsetWidth;
     const menuItemHeight = menuListSub.offsetHeight;
