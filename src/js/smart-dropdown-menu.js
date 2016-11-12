@@ -27,15 +27,15 @@ export default class SmartDropdownMenu {
 
   appendTriareaStyle() {
     // <style> for triarea
-    let categoryMenuStyle = document.getElementById('smart-dropdown-menu-style');
-    if (!categoryMenuStyle) {
-      categoryMenuStyle = document.createElement('style');
-      categoryMenuStyle.type = 'text/css';
-      categoryMenuStyle.id = 'smart-dropdown-menu-style';
-      document.querySelector('head').appendChild(categoryMenuStyle);
+    let styleTag = document.getElementById('smart-dropdown-menu-style');
+    if (!styleTag) {
+      styleTag = document.createElement('style');
+      styleTag.type = 'text/css';
+      styleTag.id = 'smart-dropdown-menu-style';
+      document.querySelector('head').appendChild(styleTag);
     }
     const styleObj = this.calculateTriarea();
-    categoryMenuStyle.innerHTML = this.objectToStyle(styleObj);
+    styleTag.innerHTML = this.objectToStyle(styleObj);
   }
 
   calculateTriarea() {
@@ -43,14 +43,14 @@ export default class SmartDropdownMenu {
     const menuListSub = this.el.querySelector('.menu-item');
     const menuItemWidth = menuListSub.offsetWidth;
     const menuItemHeight = menuListSub.offsetHeight;
-    let categoryMenuStyleObj = {};
+    let triareaStyleObj = {};
 
     for(let i = 0; i < this.items.length; i++) {
       this.items[i].openSubmenu();
 
       // calc angle of elevation
       const elevation = Math.floor(Math.atan2(menuItemWidth * 0.5, menuItemHeight * i + menuItemHeight / 2) * 180 / Math.PI);
-      categoryMenuStyleObj[`.item${i}:before`] = {
+      triareaStyleObj[`.item${i}:before`] = {
         'height': `${menuItemHeight * i + menuItemHeight / 2}px`,
         'transform': `skewX(-${elevation}deg)`,
       };
@@ -59,7 +59,7 @@ export default class SmartDropdownMenu {
       const height = (submenuHeight - menuItemHeight / 2) - menuItemHeight * i;
       // calc angle of depression
       const depression = Math.floor(Math.atan2(menuItemWidth * 0.5, height) * 180 / Math.PI);
-      categoryMenuStyleObj[`.item${i}:after`] = {
+      triareaStyleObj[`.item${i}:after`] = {
         'margin-top': `-${menuItemHeight / 2}px`,
         'height': `${height}px`,
         'transform': `skewX(${depression}deg)`,
@@ -68,7 +68,7 @@ export default class SmartDropdownMenu {
       this.items[i].closeSubmenu();
     }
 
-    return categoryMenuStyleObj;
+    return triareaStyleObj;
   }
 
   objectToStyle(obj) {
