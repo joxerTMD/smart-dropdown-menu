@@ -5,7 +5,7 @@ export default class SmartDropdownMenu {
     this.el = node;
     this.items = [];
 
-    const menuItem = this.el.querySelectorAll('.menu-list > .menu-item');
+    const menuItem = document.querySelectorAll('.smart-dropdown-menu > .sdm-list > li');
     for (let i = 0; i < menuItem.length; i++) {
       this.items.push(new SmartDropdownMenuItem(menuItem[i], i));
     }
@@ -40,7 +40,7 @@ export default class SmartDropdownMenu {
 
   calculateTriarea() {
     // "triarea" extend hover area of menu for mouse cursor's diagonal movement
-    const menuListSub = this.el.querySelector('.menu-item');
+    const menuListSub = this.el.querySelector('li');
     const menuItemWidth = menuListSub.offsetWidth;
     const menuItemHeight = menuListSub.offsetHeight;
     let triareaStyleObj = {};
@@ -55,7 +55,7 @@ export default class SmartDropdownMenu {
         'transform': `skewX(-${elevation}deg)`,
       };
 
-      const submenuHeight = this.items[i].el.querySelector('.submenu-list').offsetHeight;
+      const submenuHeight = this.items[i].el.querySelector('.sdm-list').offsetHeight;
       const height = (submenuHeight - menuItemHeight / 2) - menuItemHeight * i;
       // calc angle of depression
       const depression = Math.floor(Math.atan2(menuItemWidth * 0.5, height) * 180 / Math.PI);
