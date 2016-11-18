@@ -6,6 +6,10 @@
 `smart-dropdown-menu` **is not use `mousemove` event**.
 Hover detection of diagonal cursor movement is obtained by `:before` and `:after` of `<li>`
 
-# [License](https://github.com/yami-beta/smart-dropdown-menu/blob/master/LICENSE)
+### Demo
+Note: Hover area is shown because this example is enabled dev mode.
 
+![smart-dropdown-menu demo](https://raw.githubusercontent.com/yami-beta/smart-dropdown-menu/master/example/img/demo.gif)
+
+# [License](https://github.com/yami-beta/smart-dropdown-menu/blob/master/LICENSE)
 MIT
