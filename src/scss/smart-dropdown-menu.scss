@@ -1,3 +1,14 @@
+// color
+$dark-theme-bg: #444444;
+$dark-theme-fg: #cccccc;
+$dark-theme-fg-bright: #ffffff;
+$dark-theme-menu-button-bg: #f0f0f0;
+
+$light-theme-bg: #fcfcfc;
+$light-theme-fg: #565656;
+$light-theme-fg-bright: #333333;
+$light-theme-menu-button-bg: #565656;
+
 .smart-dropdown-menu {
   display: inline-block;
   position: relative;
@@ -25,7 +36,7 @@
     padding: 0;
     display: block;
     z-index: 10;
-    color: #ccc;
+    color: $dark-theme-fg;
     width: 0;
     height: 0;
     opacity: 0;
@@ -47,12 +58,12 @@
       white-space: nowrap; // メニュー幅が最長テキストに応じて可変
       position: static; // 子要素の.sdm-listの配置基準を親要素にするため
       line-height: 32px;
-      background-color: #444;
+      background-color: $dark-theme-bg;
 
       a {
         display: block;
         position: relative;
-        color: #ccc;
+        color: $dark-theme-fg;
         text-decoration: none;
         padding: 5px 10px 5px 10px;
         cursor: pointer;
@@ -60,10 +71,11 @@
 
       &:hover, &:active {
         & > a {
-          color: #fff;
+          color: $dark-theme-fg-bright;
         }
       }
 
+      // triarea
       &:before, &:after {
         content: "";
         display: none;
@@ -71,7 +83,6 @@
         width: 50%;
         left: 50%;
         z-index: 10;
-        background-color: rgba(0,0,0,0.4);
       }
 
       &:before {
@@ -102,7 +113,7 @@
     margin: 0;
     top: 0px;
     left: 100%;
-    background-color: #444;
+    background-color: $dark-theme-bg;
     z-index: 20;
 
     & > li {
@@ -131,7 +142,7 @@
     margin: 0 auto;
     width: 100%;
     height: 4px;
-    background-color: #f0f0f0;
+    background-color: $dark-theme-menu-button-bg;
     border-radius: 4px;
     position: relative;
     top: 50%;
@@ -143,7 +154,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: #f0f0f0;
+      background-color: $dark-theme-menu-button-bg;
       border-radius: 4px;
     }
     &:before {
@@ -155,3 +166,37 @@
   }
 }
 
+
+.smart-dropdown-menu.light-theme {
+  .sdm-list {
+    color: $light-theme-fg;
+
+    li {
+      background-color: $light-theme-bg;
+
+      a {
+        color: $light-theme-fg;
+      }
+
+      &:hover, &:active {
+        & > a {
+          color: $light-theme-fg-bright;
+        }
+      }
+    }
+  }
+
+  // submenu
+  li > .sdm-list {
+    background-color: $light-theme-bg;
+
+    & > li {
+      position: relative;
+    }
+  }
+  .smart-dropdown-menu-button {
+    span, span:before, span:after {
+      background-color: $light-theme-menu-button-bg;
+    }
+  }
+}

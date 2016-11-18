@@ -21,7 +21,7 @@
     padding: 0;
     display: block;
     z-index: 10;
-    color: #ccc;
+    color: #cccccc;
     width: 0;
     height: 0;
     opacity: 0;
@@ -39,24 +39,23 @@
       white-space: nowrap;
       position: static;
       line-height: 32px;
-      background-color: #444; }
+      background-color: #444444; }
       .smart-dropdown-menu .sdm-list li a {
         display: block;
         position: relative;
-        color: #ccc;
+        color: #cccccc;
         text-decoration: none;
         padding: 5px 10px 5px 10px;
         cursor: pointer; }
       .smart-dropdown-menu .sdm-list li:hover > a, .smart-dropdown-menu .sdm-list li:active > a {
-        color: #fff; }
+        color: #ffffff; }
       .smart-dropdown-menu .sdm-list li:before, .smart-dropdown-menu .sdm-list li:after {
         content: "";
         display: none;
         position: absolute;
         width: 50%;
         left: 50%;
-        z-index: 10;
-        background-color: rgba(0, 0, 0, 0.4); }
+        z-index: 10; }
       .smart-dropdown-menu .sdm-list li:before {
         top: 0;
         transform-origin: bottom left; }
@@ -74,7 +73,7 @@
     margin: 0;
     top: 0px;
     left: 100%;
-    background-color: #444;
+    background-color: #444444;
     z-index: 20; }
     .smart-dropdown-menu li > .sdm-list > li {
       position: relative; }
@@ -114,3 +113,20 @@
       top: -8px; }
     .smart-dropdown-menu-button span:after {
       top: 8px; }
+
+.smart-dropdown-menu.light-theme .sdm-list {
+  color: #565656; }
+  .smart-dropdown-menu.light-theme .sdm-list li {
+    background-color: #fcfcfc; }
+    .smart-dropdown-menu.light-theme .sdm-list li a {
+      color: #565656; }
+    .smart-dropdown-menu.light-theme .sdm-list li:hover > a, .smart-dropdown-menu.light-theme .sdm-list li:active > a {
+      color: #333333; }
+
+.smart-dropdown-menu.light-theme li > .sdm-list {
+  background-color: #fcfcfc; }
+  .smart-dropdown-menu.light-theme li > .sdm-list > li {
+    position: relative; }
+
+.smart-dropdown-menu.light-theme .smart-dropdown-menu-button span, .smart-dropdown-menu.light-theme .smart-dropdown-menu-button span:before, .smart-dropdown-menu.light-theme .smart-dropdown-menu-button span:after {
+  background-color: #565656; }

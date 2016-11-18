@@ -1,0 +1,5 @@
+.smart-dropdown-menu.dev .sdm-list > li {
+  &:before, &:after {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
