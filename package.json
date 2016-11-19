@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "rollup": "rollup -c rollup.config.js",
+    "build:sass": "node-sass src/scss -o dest/css",
+    "build:sass:watch": "node-sass -w src/scss -o dest/css",
+    "build:js": "rollup -c rollup.config.js",
+    "build:js:watch": "rollup -w -c rollup.config.js",
+    "browsersync": "browser-sync start -s --startPath example --files 'example/*.html, dest/js/**/*.js, dest/css/**/*.css'",
+    "build": "npm-run-all -p build:*",
+    "dev": "npm-run-all -p build:*:watch browsersync",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Takahiro Abe",
@@ -21,8 +27,11 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.4",
     "gulp-util": "^3.0.7",
+    "node-sass": "^3.13.0",
+    "npm-run-all": "^3.1.1",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.6.1",
+    "rollup-watch": "^2.5.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
