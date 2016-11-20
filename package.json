@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Library for dropdown menu",
   "main": "dist/js/smart-dropdown-menu.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/yami-beta/smart-dropdown-menu.git"
