@@ -15,6 +15,7 @@
     "browsersync": "browser-sync start -s --startPath example --files 'example/*.html, dist/js/**/*.js, dist/css/**/*.css'",
     "build": "npm-run-all -p build:*",
     "dev": "npm-run-all -p build:*:watch browsersync",
+    "version": "npm run build && git add --all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Takahiro Abe",
