@@ -1,8 +1,12 @@
 {
-  "name": "smart-dropdown-menu",
+  "name": "@yami_beta/smart-dropdown-menu",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/js/smart-dropdown-menu.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yami-beta/smart-dropdown-menu.git"
+  },
   "scripts": {
     "build:sass": "node-sass src/scss -o dist/css",
     "build:sass:watch": "node-sass -w src/scss -o dist/css",
