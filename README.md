@@ -14,10 +14,12 @@ Note: Hover area is shown because this example is enabled `dev` mode.
 ## How To Use
 
 ### Step1
-Load `dest/css/smart-dropdown-menu.css` and `dest/js/smart-dropdown-menu.js`.
+Download [smart-dropdown-menu.zip](https://github.com/yami-beta/smart-dropdown-menu/releases/download/v0.1.0/smart-dropdown-menu.zip)
+
+Load `dist/css/smart-dropdown-menu.css` and `dist/js/smart-dropdown-menu.js`
 
 ### Step2
-Markup menu.
+Markup menu
 
 1. Add `class="smart-dropdown-menu"` to `<ul>` wrapper (e.g. `<nav>`)
 2. Add `class="smart-dropdown-menu-button"` to `<div>` in `.smart-dropdown-menu-button`
