@@ -1,6 +1,7 @@
 # smart-dropdown-menu
-
 `smart-dropdown-menu` is library for dropdown menu inspired by [jQuery-menu-aim](https://github.com/kamens/jQuery-menu-aim).
+
+[![npm version](https://badge.fury.io/js/%40yami_beta%2Fsmart-dropdown-menu.svg)](https://badge.fury.io/js/%40yami_beta%2Fsmart-dropdown-menu)
 
 ## Description
 `smart-dropdown-menu` **is not use `mousemove` event**.
@@ -14,9 +15,22 @@ Note: Hover area is shown because this example is enabled `dev` mode.
 ## How To Use
 
 ### Step1
-Download [smart-dropdown-menu.zip](https://github.com/yami-beta/smart-dropdown-menu/releases/download/v0.1.0/smart-dropdown-menu.zip)
+1. Download [smart-dropdown-menu.zip](https://github.com/yami-beta/smart-dropdown-menu/releases/download/v0.1.0/smart-dropdown-menu.zip)
+2. Load `dist/css/smart-dropdown-menu.css` and `dist/js/smart-dropdown-menu.js`
 
-Load `dist/css/smart-dropdown-menu.css` and `dist/js/smart-dropdown-menu.js`
+or
+
+```sh
+$ npm install -S @yami_beta/smart-dropdown-menu
+```
+
+```html
+<link rel="stylesheet" href="node_modules/@yami_beta/smart-dropdown-menu/dist/css/smart-dropdown-menu.css">
+```
+
+```javascript
+import SmartDropdownMenu from '@yami_beta/smart-dropdown-menu';
+```
 
 ### Step2
 Markup menu
