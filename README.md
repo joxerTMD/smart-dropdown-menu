@@ -15,7 +15,7 @@ Note: Hover area is shown because this example is enabled `dev` mode.
 ## How To Use
 
 ### Step1
-1. Download [smart-dropdown-menu.zip](latest-release)
+1. Download [smart-dropdown-menu.zip][latest-release]
 2. Load `dist/css/smart-dropdown-menu.css` and `dist/js/smart-dropdown-menu.js`
 
 or
