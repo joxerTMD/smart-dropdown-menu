@@ -78,4 +78,4 @@ document.addEventListener('DOMContentLoaded', function() {
 # [License](https://github.com/yami-beta/smart-dropdown-menu/blob/master/LICENSE)
 MIT
 
-[latest-release]: https://github.com/yami-beta/smart-dropdown-menu/releases/download/v0.1.1/smart-dropdown-menu.zip
+[latest-release]: https://github.com/yami-beta/smart-dropdown-menu/releases/download/v0.1.0/smart-dropdown-menu.zip
