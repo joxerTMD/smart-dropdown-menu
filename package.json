@@ -23,7 +23,7 @@
     "build": "npm-run-all -p build:*",
     "dev": "npm-run-all -p build:*:watch browsersync",
     "version": "npm run build && npm run update_readme && git add --all",
-    "update_readme": "sed -E \"s|^(\\[latest-release\\]: ).*|\\1${npm_package_config_latest_release}${npm_package_version}/smart-dropdown-menu.zip|\" README.md",
+    "update_readme": "sed -i -E \"s|^(\\[latest-release\\]: ).*|\\1${npm_package_config_latest_release}${npm_package_version}/smart-dropdown-menu.zip|\" README.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Takahiro Abe",
