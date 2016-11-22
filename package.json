@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/yami-beta/smart-dropdown-menu.git"
   },
+  "config": {
+    "latest_release": "https://github.com/yami-beta/smart-dropdown-menu/releases/download/"
+  },
   "scripts": {
     "build:sass": "node-sass src/scss -o dist/css",
     "build:sass:watch": "node-sass -w src/scss -o dist/css",
@@ -19,7 +22,8 @@
     "browsersync": "browser-sync start -s --startPath example --files 'example/*.html, dist/js/**/*.js, dist/css/**/*.css'",
     "build": "npm-run-all -p build:*",
     "dev": "npm-run-all -p build:*:watch browsersync",
-    "version": "npm run build && git add --all",
+    "version": "npm run build && npm run update_readme && git add --all",
+    "update_readme": "sed -E \"s|^(\\[latest-release\\]: ).*|\\1${npm_package_config_latest_release}${npm_package_version}/smart-dropdown-menu.zip|\" README.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Takahiro Abe",

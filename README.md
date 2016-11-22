@@ -15,7 +15,7 @@ Note: Hover area is shown because this example is enabled `dev` mode.
 ## How To Use
 
 ### Step1
-1. Download [smart-dropdown-menu.zip](https://github.com/yami-beta/smart-dropdown-menu/releases/download/v0.1.0/smart-dropdown-menu.zip)
+1. Download [smart-dropdown-menu.zip](latest-release)
 2. Load `dist/css/smart-dropdown-menu.css` and `dist/js/smart-dropdown-menu.js`
 
 or
@@ -77,3 +77,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 # [License](https://github.com/yami-beta/smart-dropdown-menu/blob/master/LICENSE)
 MIT
+
+[latest-release]: https://github.com/yami-beta/smart-dropdown-menu/releases/download/v0.1.1/smart-dropdown-menu.zip
