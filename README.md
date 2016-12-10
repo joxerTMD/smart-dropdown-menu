@@ -1,5 +1,5 @@
 # smart-dropdown-menu
-`smart-dropdown-menu` is library for dropdown menu inspired by [jQuery-menu-aim](https://github.com/kamens/jQuery-menu-aim).
+`smart-dropdown-menu` is library for dropdown menu with hover detection of diagonal cursor movement.
 
 [![npm version](https://badge.fury.io/js/%40yami_beta%2Fsmart-dropdown-menu.svg)](https://badge.fury.io/js/%40yami_beta%2Fsmart-dropdown-menu)
 
@@ -33,7 +33,6 @@ import SmartDropdownMenu from '@yami_beta/smart-dropdown-menu';
 ```
 
 ### Step2
-Markup menu
 
 1. Add `class="smart-dropdown-menu"` to `<ul>` wrapper (e.g. `<nav>`)
 2. Add `class="smart-dropdown-menu-button"` to `<div>` in `.smart-dropdown-menu-button`
