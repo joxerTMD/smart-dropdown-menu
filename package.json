@@ -17,8 +17,8 @@
   "scripts": {
     "build:sass": "node-sass src/scss -o dist/css",
     "build:sass:watch": "node-sass -w src/scss -o dist/css",
-    "build:js": "rollup -c rollup.config.js & rollup -c rollup.config.minify.js",
-    "build:js:watch": "rollup -w -m inline -c rollup.config.js & rollup -w -m inline -c rollup.config.minify.js",
+    "build:js": "NODE_ENV=production node utils/build.js",
+    "build:js:watch": "node utils/build.js",
     "browsersync": "browser-sync start -s --startPath example --files 'example/*.html, dist/js/**/*.js, dist/css/**/*.css'",
     "build": "npm-run-all -p build:*",
     "dev": "npm-run-all -p build:*:watch browsersync",
@@ -32,11 +32,14 @@
     "babel-plugin-external-helpers": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "browser-sync": "^2.18.1",
+    "chokidar": "^1.6.1",
+    "license-list": "^0.1.3",
     "node-sass": "^3.13.0",
     "npm-run-all": "^3.1.1",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-uglify": "^1.0.1",
-    "rollup-watch": "^2.5.0"
+    "rollup-watch": "^2.5.0",
+    "uglify-save-license": "^0.4.1"
   }
 }

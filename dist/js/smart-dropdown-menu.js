@@ -1,3 +1,10 @@
+/**
+ * @yami_beta/smart-dropdown-menu
+ *
+ * Copyright (c) 2016 Takahiro Abe
+ *
+ * This software is released under the MIT license
+ */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
