@@ -1,7 +1,7 @@
 # smart-dropdown-menu
 `smart-dropdown-menu` is library for dropdown menu with hover detection of diagonal cursor movement.
 
-[![npm version](https://badge.fury.io/js/%40yami_beta%2Fsmart-dropdown-menu.svg)](https://badge.fury.io/js/%40yami_beta%2Fsmart-dropdown-menu)
+[![npm version](https://badge.fury.io/js/%40yami-beta%2Fsmart-dropdown-menu.svg)](https://badge.fury.io/js/%40yami-beta%2Fsmart-dropdown-menu)
 
 ## Description
 `smart-dropdown-menu` **is not use `mousemove` event**.
@@ -21,15 +21,15 @@ Note: Hover area is shown because this example is enabled `dev` mode.
 or
 
 ```sh
-$ npm install -S @yami_beta/smart-dropdown-menu
+$ npm install -S @yami-beta/smart-dropdown-menu
 ```
 
 ```html
-<link rel="stylesheet" href="node_modules/@yami_beta/smart-dropdown-menu/dist/css/smart-dropdown-menu.css">
+<link rel="stylesheet" href="node_modules/@yami-beta/smart-dropdown-menu/dist/css/smart-dropdown-menu.css">
 ```
 
 ```javascript
-import SmartDropdownMenu from '@yami_beta/smart-dropdown-menu';
+import SmartDropdownMenu from '@yami-beta/smart-dropdown-menu';
 ```
 
 ### Step2
