@@ -1,6 +1,6 @@
 {
   "name": "@yami-beta/smart-dropdown-menu",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Library for dropdown menu",
   "main": "dist/js/smart-dropdown-menu.js",
   "files": [
